@@ -1,3 +1,7 @@
-<h1>{{data.main.temp}}</h1>
-<h3>High: {{data.main.temp_min}}</h3>
-<h3>Low: {{data.main.temp_max}}</h3>
+{{>navbar}}
+<h4>Weather Data for: {{data.name}}</h4>
+<h1>{{data.main.temp}} {{unit}}</h1>
+<h3>High: {{data.main.temp_min}} {{unit}}</h3>
+<h3>Low: {{data.main.temp_max}} {{unit}}</h3>
+<a href="/f">F</a>
+<a href="/c">C</a>
