@@ -1,7 +1,23 @@
-{{>navbar}}
-<h4>Weather Data for: {{data.name}}</h4>
-<h1>{{data.main.temp}} {{unit}}</h1>
-<h3>High: {{data.main.temp_min}} {{unit}}</h3>
-<h3>Low: {{data.main.temp_max}} {{unit}}</h3>
-<a href="/f">F</a>
-<a href="/c">C</a>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+    <img
+      src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+      class="img-fluid"
+    />
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+    </a>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{data.main.temp}}</h3>
+    <p class="card-text text-bold">
+      {{data.name}}
+    </p>
+    <p>High: {{data.main.temp_min}} {{unit}}</p>
+    <p>Low: {{data.main.temp_max}} {{unit}}</p>
+    <a href="?deg=f">F</a>
+    <a href="?deg=c">C</a>
+  </div>
+</div>
